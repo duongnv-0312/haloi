@@ -1,0 +1,57 @@
+Documentation:
+  Enabled: false
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+    - 'vendor/**/*'
+    - 'config/initializers/monkey_patches/**/*'
+    - 'test/**/*'
+    - 'lib/tasks/auto_annotate_models.rake'
+    - 'config/**/*'
+    - 'bin/**/*'
+    - 'public/**/*'
+    - 'tmp/**/*'
+    - 'log/**/*'
+    - 'config/**'
+    - 'db/migrate/*'
+    - '*'
+  DisplayCopNames: true
+
+Rails:
+  Enabled: true
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/WordArray:
+  MinSize: 3
+
+############################# Metrics #############################
+
+Metrics/AbcSize:
+  Max: 100
+  Exclude:
+
+Metrics/CyclomaticComplexity:
+  Max: 20
+  Exclude:
+
+Metrics/PerceivedComplexity:
+  Max: 20
+  Exclude:
+
+Metrics/BlockNesting:
+  Max: 5
+
+Metrics/LineLength:
+  Max: 160
+
+Metrics/MethodLength:
+  Max: 100
+
+Metrics/ClassLength:
+  Max: 500
+  Exclude:
+
+Metrics/ModuleLength:
+  Max: 500
