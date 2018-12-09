@@ -26,7 +26,9 @@ ActiveRecord::Schema.define(version: 20180325073616) do
 
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
-    t.decimal "price", precision: 10
+    t.decimal "origin_price", precision: 10
+    t.text "description"
+    t.decimal "special_price", precision: 10
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_file_name"
