@@ -1,0 +1,5 @@
+  <h3>
+    <%= link_to Product.name, product_path(product) %>
+    <%= product.name %> |
+    <%= number_to_currency(product.origin_price, unit: "VND") %>
+  </h3>
