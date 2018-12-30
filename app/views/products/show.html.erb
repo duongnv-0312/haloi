@@ -1,0 +1,13 @@
+<h3>
+<%= @product.name %>
+</h3><br>
+<span>Gia goc:
+  <%= number_to_currency(@product.origin_price, unit: "VND", format: "%n %u") %>
+</span><br>
+<span>
+  Gia KM:
+  <%= number_to_currency(@product.origin_price, unit: "VND", format: "%n %u") %>
+</span><br>
+<span>
+  <%= @product.description %>
+</span><br>

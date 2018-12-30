@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   namespace :shop do
     resources :products
   end
+
+  resources :products
 end
