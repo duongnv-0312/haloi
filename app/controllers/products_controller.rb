@@ -1,8 +1,9 @@
 class ProductsController < ApplicationController
-  before_action :load_products, only: :index
   before_action :product, only: :show
 
   def index
+    @q = Product.ransack(params[:q])
+    @products = @q.result(distinct: true).page(params[:page])
   end
 
   def show
@@ -12,9 +13,5 @@ class ProductsController < ApplicationController
 
   def load_products
     @products = Product.all
-  end
-
-  def product
-    @product = Product.find_by params[:id]
   end
 end
