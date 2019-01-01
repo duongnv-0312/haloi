@@ -5,6 +5,10 @@
   <%= link_to "Sign_up", new_user_registration_path %>
 <% end %>
 <br>
+<%= search_form_for @q do |f| %>
+  <%= f.search_field :name_cont %>
+  <%= f.submit %>
+<% end %>
 <div class="list-products">
   <%= render @products %>
 </div>
