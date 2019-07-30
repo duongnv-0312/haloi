@@ -1,0 +1,5 @@
+instance_name_tags:
+  staging:
+    app: haloi_staging
+  production:
+    app: haloi_production
