@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :load_products, only: :index
   before_action :product, only: :show
+  before_action :authenticate_user!
 
   def index
   end
